@@ -1,0 +1,31 @@
+body {
+  background: #0B1936;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  margin-top: 20px;
+  color: #ffffff;
+  
+}
+
+
+
+h3 {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.carta {
+  color: #ffffff;
+  background: linear-gradient(to right, rgb(34,48,90),rgb(64,81,128));
+  box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+  margin: 15px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+p {
+  font-size: 14px;
+}

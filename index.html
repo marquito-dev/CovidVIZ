@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <script src="fontawsome-all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+
+
+    <title>COVID19 Data Visualization</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row text-center my-2">
+        <h1 class="col my-3">Impacto del COVID-19 en la industria de cruseros</h1>
+      </div>
+        <div class="row">
+          <div class="col carta d-flex">
+            <h2 style="font-size:38px; font-family: 'Abril Fatface', cursive">21</h2><p class="mx-2">cruceros han reportado casos abordo<p>
+            <span class="value-icon" style="font-size: 2em; color: #05E5BF;">
+              <i class="fas fa-ship"></i>
+            </span>
+          </div>
+          <div class="col carta d-flex">
+            <a href="https://www.theguardian.com/environment/2020/apr/09/revealed-6000-passengers-on-cruise-ships-at-sea-despite-coronavirus-crisis" target="_blank">
+              <h2 style="font-size:28px; font-family: 'Abril Fatface', cursive; ">6362</h2>
+            </a>
+            <p class="mx-2">pasajeros permanecen abordo en 8 cruseros (9 abr)<p>
+              <span class="value-icon" style="font-size:2em; color: #20E4ED;">
+                <i class="fas fa-water"></i>
+              </span>
+            </div>
+            <div class="col carta d-flex">
+              <h2 style="font-size:34px; font-family: 'Abril Fatface', cursive">46.9</h2><p class="mx-2">años es la edad promedio de los usuarios de cruceros<p>
+                <span class="value-icon" style="font-size:2em; color: #BD6BF2;">
+                  <i class="fas fa-user"></i>
+                </span>
+
+              </div>
+              <div class="col carta d-flex">
+                <h2 style="font-size:34px; font-family: 'Abril Fatface', cursive">19%</h2><p class="mx-2">de los usarios tienen edades de 60-69 años<p>
+                  <span class="value-icon" style="font-size:3em; color: #B7ED6B; margin:5px;">
+                    <i class="fas fa-blind"></i>
+                  </span>
+              </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <div class="col-lg-8 carta">
+            <H2 class="text-center mb-4 my-3">Precio por acción en USD de las principales lineas de crucero </H2>
+            <canvas id="myBarChart" width="100" height="50" role="img" class="my-3 "></canvas>
+            <p class="mx-4">
+              Fuente: <a style="color:#05E5BF" href="https://finance.yahoo.com/quote/NCLH/" target="_blank">YAHOO! Finance</a>
+            </p>
+          </div>
+
+          <div class="col carta">
+            <H2 class="text-center mb-5 my-3"> Numero de casos confirmados en barcos con más incidentes</H2>
+              <canvas id="myDonaChart" width="250" height="250" role="img" class="my-4 mx-4 align-center"></canvas>
+              <p class="mx-4">
+                Fuente: <a style="color:#05E5BF" href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_on_cruise_ships" target="_blank">2020 coronavirus pandemic on cruise ships</a>
+              </p>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 carta">
+            <h2 class="text-center mb-5 my-3">Demográficos de pasajeros y crew abordo de Diamond Princess cruise ship</h2>
+            <canvas id="myRadarPassChart" width="10" height="10" role="img" class=""></canvas>
+          </div>
+          <div class="col carta">
+            <H2 class="text-center mb-5 my-3">Cruceros con casos confirmados abordo</H2>
+            <canvas id="myStackedBarChart" width="100" height="50" role="img" class=""></canvas>
+            <p class="mx-4 my-4">
+              Fuente: <a style="color:#05E5BF" href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_on_cruise_ships#Summary_of_confirmed_cases_on_board" target="_blank">Summary of confirmed cases on board</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+
+    <script src="charts.js" type="text/javascript"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+
+</html>
